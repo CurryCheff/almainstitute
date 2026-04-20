@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { motion } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import { ArrowRight, BookOpen, Compass, Feather, Sparkles } from "lucide-react";
 
@@ -7,11 +7,12 @@ import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { FadeUp, StaggerGroup, StaggerItem } from "@/components/motion-primitives";
 
-import heroCampus from "@/assets/hero-campus.jpg";
+import heroCampus from "@/assets/school-building.jpg";
 import library from "@/assets/library.jpg";
 import students from "@/assets/students.jpg";
 import campusAerial from "@/assets/campus-aerial.jpg";
 import headmaster from "@/assets/headmaster.jpg";
+import almaLogo from "@/assets/alma-logo.png";
 
 const Hero = () => {
   const ref = useRef<HTMLDivElement>(null);
