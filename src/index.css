@@ -9,15 +9,20 @@
 @layer base {
   :root {
     /* Brand */
-    --cream: 33 50% 95%;          /* #F9F4EE */
-    --cream-deep: 33 35% 90%;
-    --navy: 217 69% 14%;          /* #0B1D3A */
-    --navy-deep: 217 75% 9%;
-    --navy-soft: 217 40% 22%;
-    --gold: 34 56% 51%;           /* #C9923A */
-    --gold-soft: 34 65% 65%;
-    --gold-deep: 34 70% 38%;
-    --ink: 217 30% 12%;
+    /* Logo-inspired palette: warm brown, stone grey, cream white */
+    --cream: 36 30% 96%;          /* warm white */
+    --cream-deep: 32 22% 90%;     /* soft stone */
+    --navy: 25 32% 24%;           /* deep brown (replaces navy as primary) */
+    --navy-deep: 24 38% 16%;      /* espresso */
+    --navy-soft: 25 22% 34%;      /* mid brown */
+    --gold: 28 38% 52%;           /* warm tan / bronze accent */
+    --gold-soft: 30 42% 68%;      /* light tan */
+    --gold-deep: 26 45% 38%;      /* burnished bronze */
+    --ink: 25 20% 14%;            /* near-black brown */
+    /* Greys mixed in */
+    --stone: 30 8% 55%;
+    --stone-soft: 30 10% 80%;
+    --stone-deep: 25 10% 28%;
 
     /* Semantic — light "cream" theme */
     --background: var(--cream);
@@ -35,8 +40,8 @@
     --secondary: var(--cream-deep);
     --secondary-foreground: var(--navy);
 
-    --muted: 33 25% 88%;
-    --muted-foreground: 217 18% 38%;
+    --muted: 30 14% 88%;
+    --muted-foreground: 25 12% 38%;
 
     --accent: var(--gold);
     --accent-foreground: var(--navy);
@@ -44,8 +49,8 @@
     --destructive: 0 70% 45%;
     --destructive-foreground: var(--cream);
 
-    --border: 33 22% 82%;
-    --input: 33 22% 82%;
+    --border: 30 14% 82%;
+    --input: 30 14% 82%;
     --ring: var(--gold);
 
     --radius: 0.25rem;
@@ -68,7 +73,7 @@
     --sidebar-primary-foreground: var(--cream);
     --sidebar-accent: var(--cream-deep);
     --sidebar-accent-foreground: var(--navy);
-    --sidebar-border: 33 22% 82%;
+    --sidebar-border: 30 14% 82%;
     --sidebar-ring: var(--gold);
   }
 
@@ -83,12 +88,12 @@
     --primary-foreground: var(--navy-deep);
     --secondary: var(--navy-soft);
     --secondary-foreground: var(--cream);
-    --muted: 217 30% 18%;
-    --muted-foreground: 33 20% 75%;
+    --muted: 25 15% 20%;
+    --muted-foreground: 30 14% 75%;
     --accent: var(--gold);
     --accent-foreground: var(--navy);
-    --border: 217 30% 22%;
-    --input: 217 30% 22%;
+    --border: 25 15% 24%;
+    --input: 25 15% 24%;
     --ring: var(--gold);
   }
 }
