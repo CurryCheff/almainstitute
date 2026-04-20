@@ -25,7 +25,7 @@ export const PageHero = ({ eyebrow, title, lede, image, alt }: PageHeroProps) =>
         transition={{ duration: 1.6, ease: [0.22, 1, 0.36, 1] }}
         loading="eager"
       />
-      <div className="absolute inset-0 bg-gradient-to-b from-navy-deep/70 via-navy-deep/40 to-navy-deep" />
+      <div className="absolute inset-0 bg-gradient-to-b from-navy-deep/50 via-navy-deep/25 to-navy-deep" />
 
       <div className="container-wide relative flex min-h-[80vh] flex-col justify-end pb-20 pt-40">
         <motion.span
