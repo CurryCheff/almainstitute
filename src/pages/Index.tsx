@@ -395,6 +395,7 @@ const Index = () => (
   <>
     <Hero />
     <Stats />
+    <MottoParallax />
     <Mission />
     <Pillars />
     <FeatureSection />
