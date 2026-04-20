@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { motion } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import { ArrowRight, BookOpen, Compass, Feather, Sparkles } from "lucide-react";
 
@@ -7,11 +7,12 @@ import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { FadeUp, StaggerGroup, StaggerItem } from "@/components/motion-primitives";
 
-import heroCampus from "@/assets/hero-campus.jpg";
+import heroCampus from "@/assets/school-building.jpg";
 import library from "@/assets/library.jpg";
 import students from "@/assets/students.jpg";
 import campusAerial from "@/assets/campus-aerial.jpg";
 import headmaster from "@/assets/headmaster.jpg";
+import almaLogo from "@/assets/alma-logo.png";
 
 const Hero = () => {
   const ref = useRef<HTMLDivElement>(null);
@@ -107,6 +108,71 @@ const Stats = () => {
             </StaggerItem>
           ))}
         </StaggerGroup>
+      </div>
+    </section>
+  );
+};
+
+const MottoParallax = () => {
+  const ref = useRef<HTMLDivElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["start end", "end start"],
+  });
+  const yBack = useTransform(scrollYProgress, [0, 1], ["-20%", "20%"]);
+  const yWord = useTransform(scrollYProgress, [0, 1], ["40%", "-40%"]);
+  const yLogo = useTransform(scrollYProgress, [0, 1], ["30%", "-30%"]);
+  const opacity = useTransform(scrollYProgress, [0, 0.3, 0.7, 1], [0, 1, 1, 0]);
+
+  return (
+    <section
+      ref={ref}
+      className="relative h-[90vh] overflow-hidden bg-navy-deep text-cream"
+    >
+      {/* Background plate */}
+      <motion.div style={{ y: yBack }} className="absolute inset-0 scale-125">
+        <img
+          src={campusAerial}
+          alt=""
+          className="h-full w-full object-cover opacity-30"
+          loading="lazy"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-navy-deep via-navy-deep/70 to-navy-deep" />
+      </motion.div>
+
+      {/* Giant scrolling word */}
+      <motion.div
+        style={{ y: yWord, opacity }}
+        className="pointer-events-none absolute inset-x-0 top-1/2 -translate-y-1/2 text-center"
+        aria-hidden
+      >
+        <span className="block font-serif text-[22vw] font-medium leading-none tracking-tighter text-gold/10 md:text-[18vw]">
+          ALMA
+        </span>
+      </motion.div>
+
+      {/* Foreground content */}
+      <div className="container-prose relative flex h-full flex-col items-center justify-center text-center">
+        <motion.img
+          style={{ y: yLogo }}
+          src={almaLogo}
+          alt="Alma Institute crest"
+          className="mb-8 h-24 w-24 object-contain drop-shadow-[0_4px_20px_hsl(var(--gold)/0.35)] md:h-32 md:w-32"
+        />
+        <FadeUp>
+          <span className="eyebrow !text-gold justify-center">The School Motto</span>
+        </FadeUp>
+        <FadeUp delay={0.1}>
+          <h2 className="display-serif mt-8 text-6xl italic text-cream md:text-8xl lg:text-[8rem]">
+            Alma <span className="text-gold">Mater</span>
+          </h2>
+        </FadeUp>
+        <FadeUp delay={0.25}>
+          <p className="mx-auto mt-8 max-w-xl text-base leading-relaxed text-cream/70 md:text-lg">
+            A nourishing mother — the school that shapes mind, character, and
+            conviction for a lifetime.
+          </p>
+        </FadeUp>
       </div>
     </section>
   );
@@ -329,6 +395,7 @@ const Index = () => (
   <>
     <Hero />
     <Stats />
+    <MottoParallax />
     <Mission />
     <Pillars />
     <FeatureSection />
