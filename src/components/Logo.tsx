@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import almaLogo from "@/assets/alma-logo.png";
 
 export const Logo = ({ light = false }: { light?: boolean }) => (
   <Link
@@ -7,11 +8,15 @@ export const Logo = ({ light = false }: { light?: boolean }) => (
     className="group inline-flex items-center gap-3"
   >
     <span
-      className={`grid h-9 w-9 place-items-center rounded-full border ${
-        light ? "border-cream/60 text-cream" : "border-navy/30 text-navy"
-      } transition-colors group-hover:border-gold group-hover:text-gold`}
+      className={`grid h-11 w-11 place-items-center rounded-full transition-transform duration-500 group-hover:scale-105 ${
+        light ? "bg-cream/10 ring-1 ring-cream/20" : ""
+      }`}
     >
-      <span className="font-serif text-base font-semibold leading-none">A</span>
+      <img
+        src={almaLogo}
+        alt="Alma Institute crest"
+        className="h-10 w-10 object-contain"
+      />
     </span>
     <span className="flex flex-col leading-none">
       <span
@@ -26,7 +31,7 @@ export const Logo = ({ light = false }: { light?: boolean }) => (
           light ? "text-cream/70" : "text-muted-foreground"
         }`}
       >
-        Est. 1894
+        Est. 2024
       </span>
     </span>
   </Link>
