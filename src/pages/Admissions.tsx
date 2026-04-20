@@ -11,27 +11,27 @@ const steps = [
   {
     n: "01",
     title: "Inquiry",
-    body: "Submit a short online inquiry. Our admissions office will respond within five working days with a personalised welcome.",
+    body: "Submit a short online inquiry. Our admissions office will respond within five working days with a warm welcome and next steps.",
   },
   {
     n: "02",
     title: "Visit & Interview",
-    body: "Tour the campus, meet a Sixth Form ambassador, and sit a short conversational interview with a senior teacher.",
+    body: "Tour the campus along Vumba Road, meet our staff, and sit a friendly conversational interview with a senior teacher.",
   },
   {
     n: "03",
     title: "Application",
-    body: "Submit transcripts from the previous two years, two references, and a one‑page letter of intent from the prospective scholar.",
+    body: "Submit school reports from the previous two years, two references, and a short letter of intent from the prospective scholar.",
   },
   {
     n: "04",
     title: "Assessment",
-    body: "Form 1–5 candidates sit short papers in English and mathematics. Sixth Form candidates submit an additional written portfolio.",
+    body: "Form 1–5 candidates sit short papers in English and mathematics. Form 6 candidates also discuss their chosen A-Level subjects.",
   },
   {
     n: "05",
-    title: "Offer",
-    body: "Decisions are released by the first of April. Families have until the end of April to confirm a place.",
+    title: "Offer & Enrolment",
+    body: "Offers are released in advance of each term. Families confirm a place and select either the ZIMSEC, Cambridge, or combined pathway.",
   },
 ];
 
@@ -58,7 +58,7 @@ const Admissions = () => {
             Begin your <em className="text-gold">Alma</em> story.
           </>
         ),
-        lede: "We welcome day and boarding scholars of every background. Our admissions process is rigorous, kind, and entirely focused on whether Alma is the right school for your young person.",
+        lede: "We welcome day scholars of every background to join Alma Institute, just outside Mutare on Vumba Road. Choose between the ZIMSEC and Cambridge curricula — or combine the two for the broadest possible education.",
         image: students,
         alt: "Scholars walking through the south archway",
       }}
@@ -117,10 +117,10 @@ const Admissions = () => {
             <h2 className="display-serif mt-6 text-4xl text-navy md:text-5xl">An honest investment.</h2>
             <ul className="mt-10 divide-y divide-border border-y border-border">
               {[
-                ["Day · Forms 1–3", "£ 18,400 / year"],
-                ["Day · Forms 4–6", "£ 21,200 / year"],
-                ["Boarding · Forms 1–3", "£ 32,800 / year"],
-                ["Boarding · Forms 4–6", "£ 36,400 / year"],
+                ["Forms 1 – 3 (ZIMSEC)", "Contact for fees"],
+                ["Forms 1 – 3 (Cambridge)", "Contact for fees"],
+                ["Forms 4 – 5 (O-Level / IGCSE)", "Contact for fees"],
+                ["Form 6 (A-Level)", "Contact for fees"],
               ].map(([k, v]) => (
                 <li key={k} className="flex items-baseline justify-between gap-6 py-5">
                   <span className="text-navy">{k}</span>
@@ -129,8 +129,9 @@ const Admissions = () => {
               ))}
             </ul>
             <p className="mt-6 text-sm text-muted-foreground">
-              Fees include tuition, books, lunches, most expeditions, and all
-              standard examination entries.
+              Fees include tuition, books, and standard examination entries.
+              Please contact the admissions office for the current term's
+              fee schedule in USD or ZWG.
             </p>
           </FadeUp>
           <FadeUp delay={0.15}>
@@ -139,17 +140,17 @@ const Admissions = () => {
               For families of every means.
             </h2>
             <p className="mt-8 leading-relaxed text-muted-foreground">
-              Each year, the Whitfield Foundation funds means‑tested bursaries
-              of up to one hundred percent of fees. We also offer scholarships
-              for academic, musical, and sporting excellence at entry to Form 1
-              and Form 6.
+              Alma Institute is committed to ensuring that talented young
+              Zimbabweans are not turned away for financial reasons. A
+              limited number of bursaries and scholarships are awarded each
+              year on the basis of academic promise and family circumstance.
             </p>
             <ul className="mt-8 space-y-3">
               {[
-                "Means‑tested bursaries up to 100% of fees",
-                "Academic scholarships at Forms 1 & 6",
-                "Music and choral awards at every entry point",
-                "Sport and outdoor leadership awards",
+                "Means-tested bursaries for promising scholars",
+                "Academic scholarships at Forms 1 and 6",
+                "Sport and arts awards at every entry point",
+                "Sibling discounts for families with multiple children",
               ].map((b) => (
                 <li key={b} className="flex items-start gap-3 text-navy">
                   <Check className="mt-1 h-4 w-4 text-gold" />

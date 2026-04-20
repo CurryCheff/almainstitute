@@ -28,9 +28,9 @@ const Contact = () => {
             We would be glad to <em className="text-gold">hear from you</em>.
           </>
         ),
-        lede: "Whether you are a prospective family, an alumna, a journalist, or a neighbour — write to us. We answer every letter.",
+        lede: "Whether you are a prospective family, an alumnus, or a neighbour in the Mutare community — write to us. We answer every message.",
         image: campusAerial,
-        alt: "Aerial of Alma Institute campus in autumn light",
+        alt: "Alma Institute campus along Vumba Road",
       }}
     >
       {/* Contact cards */}
@@ -41,17 +41,17 @@ const Contact = () => {
               {
                 icon: MapPin,
                 title: "Visit",
-                lines: ["14 Ashworth Lane", "Bramwell Hills, Province", "BR3 4QA"],
+                lines: ["Alma Institute", "Vumba Road", "Mutare, Zimbabwe"],
               },
               {
                 icon: Phone,
                 title: "Telephone",
-                lines: ["+1 (555) 014‑1894", "Admissions: +1 (555) 014‑2014"],
+                lines: ["+263 (0) 20 000 0000", "Admissions: +263 (0) 77 000 0000"],
               },
               {
                 icon: Mail,
                 title: "Email",
-                lines: ["office@alma.edu", "admissions@alma.edu"],
+                lines: ["info@almainstitute.co.zw", "admissions@almainstitute.co.zw"],
               },
             ].map((c) => (
               <StaggerItem key={c.title} className="bg-cream p-10">
@@ -75,7 +75,7 @@ const Contact = () => {
             <FadeUp>
               <span className="eyebrow">Write to us</span>
               <h2 className="display-serif mt-6 text-4xl text-navy md:text-5xl">
-                A letter, properly addressed.
+                A message, properly addressed.
               </h2>
             </FadeUp>
             <FadeUp delay={0.1}>
@@ -114,10 +114,9 @@ const Contact = () => {
                     className="w-full border-b border-border bg-transparent py-3 text-navy focus:border-gold focus:outline-none"
                   >
                     <option value="" disabled>Choose a department…</option>
-                    <option>Admissions</option>
+                    <option>Admissions / Enrolment</option>
                     <option>Headmaster's office</option>
-                    <option>Alumni relations</option>
-                    <option>Press inquiries</option>
+                    <option>Academic enquiry</option>
                     <option>General</option>
                   </select>
                 </div>
@@ -151,8 +150,8 @@ const Contact = () => {
             <FadeUp delay={0.1}>
               <ul className="mt-8 divide-y divide-border border-y border-border">
                 {[
-                  ["Monday – Friday", "8:00 — 17:30"],
-                  ["Saturday", "9:00 — 13:00"],
+                  ["Monday – Friday", "7:30 — 17:00"],
+                  ["Saturday", "8:00 — 12:00"],
                   ["Sunday", "Closed"],
                 ].map(([d, h]) => (
                   <li key={d} className="flex items-center justify-between py-4">
@@ -164,9 +163,9 @@ const Contact = () => {
               <div className="mt-10 flex items-start gap-3 rounded-sm bg-cream p-6">
                 <Clock className="mt-1 h-5 w-5 text-gold" />
                 <p className="text-sm leading-relaxed text-muted-foreground">
-                  Open days are held on the second Saturday of October,
-                  November, and February. Please book a place through the
-                  admissions office.
+                  Campus tours are available throughout the term by
+                  appointment. Please contact the admissions office to
+                  arrange a visit.
                 </p>
               </div>
             </FadeUp>
@@ -180,14 +179,15 @@ const Contact = () => {
           <FadeUp className="md:col-span-7">
             <span className="eyebrow !text-gold">Finding us</span>
             <h2 className="display-serif mt-6 text-4xl md:text-5xl">
-              Two gates, one quiet lane.
+              Just outside Mutare, along Vumba Road.
             </h2>
           </FadeUp>
           <FadeUp delay={0.1} className="md:col-span-4 md:col-start-9">
             <p className="text-cream/75">
-              The main gate opens onto Ashworth Lane; the South Gate, by the
-              chapel, is reserved for boarders and staff. Visitors should
-              announce themselves at the porter's lodge.
+              Our campus sits in a beautiful, picturesque setting on the
+              edge of Mutare — a short drive from the city centre, with the
+              Vumba mountains as a backdrop. Visitors should announce
+              themselves at the main gate.
             </p>
           </FadeUp>
         </div>
@@ -198,7 +198,7 @@ const Contact = () => {
             <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 text-center">
               <div className="mx-auto h-3 w-3 rounded-full bg-gold shadow-gold animate-pulse" />
               <p className="mt-4 font-serif text-xl text-cream">Alma Institute</p>
-              <p className="text-xs uppercase tracking-[0.22em] text-cream/70">14 Ashworth Lane</p>
+              <p className="text-xs uppercase tracking-[0.22em] text-cream/70">Vumba Road · Mutare</p>
             </div>
           </div>
         </FadeUp>
