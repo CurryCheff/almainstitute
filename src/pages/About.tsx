@@ -11,13 +11,13 @@ const About = () => (
       eyebrow: "About the Institute",
       title: (
         <>
-          A school built on <em className="text-gold">letters</em>,
-          <br /> labour, and light.
+          A school built on <em className="text-gold">welfare</em>,
+          <br /> wisdom, and learning.
         </>
       ),
-      lede: "Founded in 1894 as a school for scholars of every background, Alma Institute has grown into one of the region's most distinguished co‑educational high schools — Form 1 through Form 6.",
+      lede: "Established in 2024 just outside Mutare along Vumba Road, Alma Institute is a premier private school offering the ZIMSEC and Cambridge curricula from Form 1 through Form 6.",
       image: campusAerial,
-      alt: "Aerial view of Alma Institute's quadrangle",
+      alt: "Aerial view of Alma Institute's campus",
     }}
   >
     {/* Letter from the Head */}
@@ -29,61 +29,61 @@ const About = () => (
             On joining the Alma family.
           </h2>
           <div className="mt-10 overflow-hidden rounded-sm shadow-soft">
-            <img src={headmaster} alt="Dr. Augustin Vale" className="w-full object-cover" loading="lazy" />
+            <img src={headmaster} alt="The Headmaster of Alma Institute" className="w-full object-cover" loading="lazy" />
           </div>
           <p className="mt-5 text-xs uppercase tracking-[0.22em] text-muted-foreground">
-            Dr. Augustin Vale · Headmaster since 2014
+            The Headmaster · Alma Institute
           </p>
         </FadeUp>
         <div className="md:col-span-6 md:col-start-7">
           <FadeUp delay={0.1}>
             <p className="editorial-drop font-serif text-xl leading-snug text-navy md:text-2xl">
-              When a young person walks through our gates for the first time, we
-              are not asking ourselves what they already know. We are asking
-              what they are curious about — and how we might widen that
-              curiosity into a life of meaning.
+              When a young person walks through our gates for the first time,
+              we are not asking what they already know. We are asking what
+              they are curious about — and how we might widen that curiosity
+              into a life of meaning.
             </p>
           </FadeUp>
           <FadeUp delay={0.2}>
             <p className="mt-6 leading-relaxed text-muted-foreground">
               Our six forms are organised around a simple conviction: that
-              adolescence is not a problem to be managed, but a season of
-              becoming. Our scholars are taught by adults who genuinely admire
-              them — and who hold them to standards they will, in time, hold
-              themselves to.
+              every learner deserves a safe, comfortable environment in
+              which to grow. We pair the depth of the Cambridge curriculum
+              with the local relevance of ZIMSEC, so that our scholars are
+              equally at home in Mutare or anywhere in the world.
             </p>
           </FadeUp>
           <FadeUp delay={0.3}>
             <p className="mt-6 leading-relaxed text-muted-foreground">
-              I invite you to visit us. Walk our cloisters. Sit at the back of a
-              Form 6 history seminar. Have lunch in the dining hall. You will
-              know, very quickly, whether Alma is your school.
+              I invite you to visit us. Walk our grounds. Sit in on a Form 6
+              lesson. Have a conversation with our teachers. You will know,
+              very quickly, whether Alma is your school.
             </p>
           </FadeUp>
           <FadeUp delay={0.4}>
-            <p className="mt-10 font-serif text-2xl italic text-navy">— Augustin</p>
+            <p className="mt-10 font-serif text-2xl italic text-navy">— The Headmaster</p>
           </FadeUp>
         </div>
       </div>
     </section>
 
-    {/* History timeline */}
+    {/* History / Milestones */}
     <section className="bg-cream-deep py-32">
       <div className="container-wide">
         <FadeUp>
-          <span className="eyebrow">Our History</span>
+          <span className="eyebrow">Our Story</span>
           <h2 className="display-serif mt-6 max-w-2xl text-4xl text-navy md:text-5xl">
-            One hundred and thirty‑one years of scholarship.
+            A young school with serious ambition.
           </h2>
         </FadeUp>
         <StaggerGroup className="mt-20 grid gap-px overflow-hidden bg-border md:grid-cols-2 lg:grid-cols-4">
           {[
-            { year: "1894", title: "The school is founded", body: "Eleven boys, two masters, one borrowed chapel hall on Ashworth Lane." },
-            { year: "1923", title: "The Whitfield Library opens", body: "A gift from Sir Edmund Whitfield establishes the school's enduring intellectual heart." },
-            { year: "1971", title: "The Institute becomes co‑educational", body: "The first cohort of girls enters Form 1; the school doubles in size within a decade." },
-            { year: "2014", title: "A new chapter begins", body: "Dr. Augustin Vale is appointed Headmaster, renewing the school's commitment to the arts and sciences alike." },
+            { year: "2024", title: "Alma Institute is founded", body: "Doors open along Vumba Road, just outside Mutare — a school built on welfare, wisdom, and warmth." },
+            { year: "Form 1–6", title: "A complete journey", body: "From the foundational years through A-Levels, scholars progress through one coherent education." },
+            { year: "ZIMSEC", title: "Locally rooted", body: "A comprehensive national curriculum that prepares scholars for Zimbabwean tertiary education." },
+            { year: "Cambridge", title: "Globally connected", body: "An internationally recognised pathway that opens doors to universities the world over." },
           ].map((m) => (
-            <StaggerItem key={m.year} className="bg-cream p-10">
+            <StaggerItem key={m.title} className="bg-cream p-10">
               <div className="font-serif text-5xl text-gold">{m.year}</div>
               <h3 className="mt-6 font-serif text-xl text-navy">{m.title}</h3>
               <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{m.body}</p>
@@ -98,7 +98,7 @@ const About = () => (
       <div className="container-wide grid gap-16 md:grid-cols-2 md:items-center md:gap-20">
         <FadeUp>
           <Parallax className="aspect-[4/5] w-full rounded-sm shadow-elegant" amount={50}>
-            <img src={library} alt="The Whitfield Library reading room" className="h-[120%] w-full object-cover" loading="lazy" />
+            <img src={library} alt="Alma Institute library and study space" className="h-[120%] w-full object-cover" loading="lazy" />
           </Parallax>
         </FadeUp>
         <div>
@@ -110,8 +110,8 @@ const About = () => (
           </FadeUp>
           <StaggerGroup className="mt-10 divide-y divide-border border-y border-border">
             {[
-              ["Rigour", "We teach the difficult thing well."],
-              ["Kindness", "We expect courtesy as a daily discipline."],
+              ["Welfare", "Every learner deserves a safe and comfortable environment."],
+              ["Rigour", "We teach the difficult thing well, in both ZIMSEC and Cambridge tracks."],
               ["Curiosity", "We treat questions as the highest form of intelligence."],
               ["Service", "We measure character by what is done for others."],
               ["Joy", "We believe a school should be a place students love."],
@@ -132,20 +132,20 @@ const About = () => (
         <FadeUp className="md:col-span-7">
           <span className="eyebrow !text-gold">The Faculty</span>
           <h2 className="display-serif mt-6 text-4xl md:text-5xl">
-            Sixty‑four teachers. One ratio of <em className="text-gold">1 to 8</em>.
+            Teachers who genuinely admire <em className="text-gold">their students</em>.
           </h2>
         </FadeUp>
         <FadeUp className="md:col-span-4 md:col-start-9" delay={0.1}>
           <p className="text-cream/75">
-            Two‑thirds of our masters and mistresses hold advanced degrees in
-            their subjects. Many came to teaching after first careers in
-            research, performance, or letters.
+            Our staff are qualified to teach both ZIMSEC and Cambridge
+            syllabi, and many bring experience from research, industry, and
+            the arts. Class sizes are kept small so every scholar is known.
           </p>
         </FadeUp>
       </div>
       <FadeUp delay={0.2} className="mt-16">
         <Parallax className="container-wide aspect-[21/9] overflow-hidden" amount={60}>
-          <img src={students} alt="Scholars walking through the south arch" className="h-[120%] w-full object-cover" loading="lazy" />
+          <img src={students} alt="Scholars on the Alma Institute campus" className="h-[120%] w-full object-cover" loading="lazy" />
         </Parallax>
       </FadeUp>
     </section>

@@ -9,11 +9,12 @@ export const Footer = () => {
         <div className="md:col-span-5">
           <Logo light />
           <p className="mt-8 max-w-sm font-serif text-xl leading-snug text-cream/85">
-            "Per litteras ad lucem" — through letters, into the light.
+            "Knowledge, wisdom, and the courage to meet challenges positively."
           </p>
           <p className="mt-6 max-w-md text-sm leading-relaxed text-cream/65">
-            A high school of Forms 1 through 6, shaping principled, curious, and
-            courageous young scholars on a historic campus since 1894.
+            A premier private school offering ZIMSEC and Cambridge curricula
+            from Form 1 to Form 6 — set just outside Mutare along Vumba
+            Road, Zimbabwe. Established 2024.
           </p>
         </div>
 
@@ -23,19 +24,19 @@ export const Footer = () => {
             <li className="flex items-start gap-3">
               <MapPin className="mt-0.5 h-4 w-4 text-gold" />
               <span>
-                14 Ashworth Lane
+                Vumba Road
                 <br />
-                Bramwell Hills, Province
+                Mutare, Zimbabwe
               </span>
             </li>
             <li className="flex items-center gap-3">
               <Phone className="h-4 w-4 text-gold" />
-              <span>+1 (555) 014‑1894</span>
+              <span>+263 (0) 20 000 0000</span>
             </li>
             <li className="flex items-center gap-3">
               <Mail className="h-4 w-4 text-gold" />
-              <a href="mailto:office@alma.edu" className="link-underline">
-                office@alma.edu
+              <a href="mailto:info@almainstitute.co.zw" className="link-underline">
+                info@almainstitute.co.zw
               </a>
             </li>
           </ul>
@@ -55,7 +56,7 @@ export const Footer = () => {
       <div className="border-t border-cream/10">
         <div className="container-wide flex flex-col items-start justify-between gap-4 py-6 text-xs text-cream/55 md:flex-row md:items-center">
           <p>© {new Date().getFullYear()} Alma Institute. All rights reserved.</p>
-          <p className="tracking-[0.2em] uppercase">Form 1 — Form 6 · Co‑educational</p>
+          <p className="tracking-[0.2em] uppercase">ZIMSEC · Cambridge · Form 1 — Form 6</p>
         </div>
       </div>
     </footer>

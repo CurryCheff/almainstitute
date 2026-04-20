@@ -45,7 +45,7 @@ const Hero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.6 }}
         >
-          A High School of Distinction · Est. 1894
+          A Premier Private School · Mutare, Zimbabwe · Est. 2024
         </motion.span>
 
         <motion.h1
@@ -54,9 +54,9 @@ const Hero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.1, delay: 0.7, ease: [0.22, 1, 0.36, 1] }}
         >
-          <span className="block text-5xl md:text-7xl lg:text-[5.5rem]">A place where</span>
-          <span className="block text-5xl italic text-gold md:text-7xl lg:text-[5.5rem]">young minds</span>
-          <span className="block text-5xl md:text-7xl lg:text-[5.5rem]">find their voice.</span>
+          <span className="block text-5xl md:text-7xl lg:text-[5.5rem]">Enhance your</span>
+          <span className="block text-5xl italic text-gold md:text-7xl lg:text-[5.5rem]">future</span>
+          <span className="block text-5xl md:text-7xl lg:text-[5.5rem]">with Alma Institute.</span>
         </motion.h1>
 
         <motion.p
@@ -65,9 +65,11 @@ const Hero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.9, delay: 1 }}
         >
-          From Form 1 to Form 6, Alma Institute prepares scholars to think
-          rigorously, write beautifully, and lead with quiet conviction.
+          A dual ZIMSEC and Cambridge curriculum, set on a tranquil campus
+          along Vumba Road — preparing scholars to think rigorously, lead with
+          conviction, and meet challenges positively.
         </motion.p>
+
 
         <motion.div
           className="mt-12 flex flex-wrap items-center gap-6"
@@ -117,10 +119,10 @@ const Hero = () => {
 
 const Numbers = () => {
   const stats = [
-    { v: "131", l: "Years of tradition" },
-    { v: "412", l: "Scholars in residence" },
-    { v: "1 : 8", l: "Faculty to student ratio" },
-    { v: "98%", l: "University placement" },
+    { v: "2", l: "Curricula · ZIMSEC & Cambridge" },
+    { v: "1 : 12", l: "Teacher to student ratio" },
+    { v: "20+", l: "Co-curricular societies" },
+    { v: "100%", l: "Pass-focused mentorship" },
   ];
   return (
     <section className="relative overflow-hidden bg-navy py-20 text-cream">
@@ -146,7 +148,7 @@ const Manifesto = () => (
     <div className="container-prose grid gap-16 md:grid-cols-12">
       <div className="md:col-span-4">
         <FadeUp>
-          <span className="eyebrow">Our Manifesto</span>
+          <span className="eyebrow">Our Mission</span>
           <h2 className="display-serif mt-6 text-4xl text-navy md:text-5xl">
             An education of <em className="text-gold">substance</em>.
           </h2>
@@ -155,17 +157,18 @@ const Manifesto = () => (
       <div className="md:col-span-7 md:col-start-6">
         <FadeUp delay={0.15}>
           <p className="editorial-drop font-serif text-2xl leading-snug text-navy md:text-[1.6rem]">
-            We believe that a school is, above all, a community of readers and
-            makers. Our scholars learn to argue with care, to write with
-            precision, and to listen as a discipline.
+            To dedicate ourselves to safeguarding the welfare of learners
+            through an education that nurtures knowledge, wisdom, and the
+            confidence to meet challenges positively.
           </p>
         </FadeUp>
         <FadeUp delay={0.3}>
           <p className="mt-8 text-lg leading-relaxed text-muted-foreground">
-            From the first form to the sixth, every Alma student moves through a
-            curriculum that braids the humanities, the sciences, and the arts —
-            and through a campus life that asks them to lead, to serve, and to
-            wonder.
+            Set on a beautiful campus just outside the city of Mutare along
+            Vumba Road, Alma Institute equips bright young Zimbabweans with
+            crucial life skills — preparing them to become adaptable citizens
+            and leading professionals through both the ZIMSEC and Cambridge
+            curricula.
           </p>
         </FadeUp>
       </div>
@@ -177,23 +180,23 @@ const Pillars = () => {
   const items = [
     {
       icon: BookOpen,
-      title: "Letters",
-      body: "A humanities core anchored in close reading, original writing, and argument across English, history, and modern languages.",
+      title: "ZIMSEC",
+      body: "A comprehensive, locally relevant curriculum designed to meet national standards and prepare scholars for tertiary education in Zimbabwe.",
     },
     {
       icon: Compass,
-      title: "Sciences",
-      body: "Inquiry-led laboratories in biology, chemistry, physics, and mathematics — taught as a way of seeing the world.",
+      title: "Cambridge",
+      body: "A globally recognised framework that fosters critical thinking and deep understanding — opening doors to universities worldwide.",
     },
     {
       icon: Feather,
-      title: "Arts",
-      body: "Studios for painting, music, and theatre where craft, discipline, and imagination meet daily.",
+      title: "Co-Curricular",
+      body: "Sports, arts, STEM, debate, and community service that build teamwork, leadership, and the discovery of new passions.",
     },
     {
       icon: Sparkles,
       title: "Character",
-      body: "Houses, mentorship, service, and sport — the quiet architecture that forms a scholar into a citizen.",
+      body: "House mornings, mentorship, and service — the quiet architecture that forms a scholar into a thoughtful, principled citizen.",
     },
   ];
   return (
@@ -253,10 +256,11 @@ const FeatureSplit = () => (
         </FadeUp>
         <FadeUp delay={0.15}>
           <p className="mt-8 text-lg leading-relaxed text-muted-foreground">
-            The Whitfield Library holds more than forty thousand volumes, a
-            rare-books room, and a quiet upstairs gallery where Sixth Form
-            scholars write their final dissertations. It is open from first
-            light until evening prep.
+            Our library and resource centre is open from morning assembly
+            until evening prep — a quiet space where Form 6 scholars draft
+            their Cambridge coursework, and younger students discover the
+            habits of close reading, careful note-taking, and original
+            writing.
           </p>
         </FadeUp>
         <FadeUp delay={0.3}>
@@ -274,10 +278,10 @@ const FeatureSplit = () => (
 
 const LifeGrid = () => {
   const items = [
-    { img: science, title: "In the laboratories", form: "Form 4 · Chemistry" },
-    { img: sports, title: "On the fields", form: "First XV · Lent term" },
-    { img: arts, title: "In the studios", form: "Form 5 · Painting" },
-    { img: students, title: "Through the cloisters", form: "House mornings" },
+    { img: science, title: "In the laboratories", form: "Form 4 · Sciences" },
+    { img: sports, title: "On the fields", form: "Inter-house games" },
+    { img: arts, title: "In the studios", form: "Form 5 · Visual Art" },
+    { img: students, title: "Across the campus", form: "Morning assembly" },
   ];
   return (
     <section className="relative overflow-hidden bg-navy-deep py-32 text-cream">
@@ -292,9 +296,9 @@ const LifeGrid = () => {
           </FadeUp>
           <FadeUp delay={0.15}>
             <p className="text-base leading-relaxed text-cream/75">
-              Mornings begin with chapel and house meetings; afternoons turn to
-              sport, music, and society. Evenings are for prep, conversation,
-              and the slow work of becoming.
+              Mornings begin with assembly and house meetings; afternoons
+              turn to sport, music, debate, and society. Evenings are for
+              prep, conversation, and the slow work of becoming.
             </p>
           </FadeUp>
         </div>
@@ -331,13 +335,13 @@ const HeadmasterQuote = () => (
         <div className="relative aspect-[4/5] overflow-hidden rounded-sm shadow-soft">
           <img
             src={headmaster}
-            alt="Dr. Augustin Vale, Headmaster of Alma Institute"
+            alt="The Headmaster of Alma Institute"
             className="h-full w-full object-cover"
             loading="lazy"
           />
         </div>
         <p className="mt-5 text-xs uppercase tracking-[0.22em] text-muted-foreground">
-          Dr. Augustin Vale · Headmaster
+          The Headmaster · Alma Institute
         </p>
       </FadeUp>
       <div className="md:col-span-7 md:col-start-6">
@@ -374,17 +378,17 @@ const CTA = () => (
     <Spotlight />
     <div className="container-prose relative py-32 text-center">
       <FadeUp>
-        <span className="eyebrow !text-gold justify-center">Admissions Open · Forms 1–6</span>
+        <span className="eyebrow !text-gold justify-center">Enrolment Open · Forms 1 – 6</span>
       </FadeUp>
       <FadeUp delay={0.1}>
         <h2 className="display-serif mx-auto mt-8 max-w-3xl text-4xl text-cream md:text-6xl">
-          The next chapter of Alma <em className="text-gold">begins with you</em>.
+          Begin your journey with Alma <em className="text-gold">today</em>.
         </h2>
       </FadeUp>
       <FadeUp delay={0.25}>
         <p className="mx-auto mt-8 max-w-xl text-base leading-relaxed text-cream/75">
-          Applications for the upcoming Michaelmas term close on the fifteenth
-          of February. We welcome day and boarding scholars.
+          We welcome day scholars at every form, across both the ZIMSEC and
+          Cambridge tracks. Come and visit our campus along Vumba Road.
         </p>
       </FadeUp>
       <FadeUp delay={0.4}>
@@ -395,7 +399,7 @@ const CTA = () => (
               className="group relative inline-flex items-center gap-3 overflow-hidden rounded-full bg-gold px-7 py-4 text-xs uppercase tracking-[0.22em] text-navy-deep transition-all duration-500 hover:shadow-gold"
             >
               <span className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-cream/40 to-transparent transition-transform duration-700 group-hover:translate-x-full" />
-              <span className="relative">Apply for entry</span>
+              <span className="relative">Enrol now</span>
               <ArrowRight className="relative h-4 w-4 transition-transform duration-500 group-hover:translate-x-1" />
             </Link>
           </Magnetic>
