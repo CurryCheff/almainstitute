@@ -187,9 +187,9 @@ const Admissions = () => {
           <FadeUp delay={0.15} className="md:col-span-6 md:col-start-7">
             <form onSubmit={onSubmit} className="space-y-6">
               {[
-                { name: "parent", label: "Parent or guardian name", type: "text" },
-                { name: "student", label: "Student name", type: "text" },
-                { name: "email", label: "Email address", type: "email" },
+                { name: "parent", label: "Parent or guardian name", type: "text", nameField: true },
+                { name: "student", label: "Student name", type: "text", nameField: true },
+                { name: "email", label: "Email address", type: "email", nameField: false },
               ].map((f) => (
                 <div key={f.name}>
                   <label className="mb-2 block text-xs uppercase tracking-[0.22em] text-cream/65">
@@ -199,6 +199,20 @@ const Admissions = () => {
                     required
                     name={f.name}
                     type={f.type}
+                    maxLength={f.nameField ? 100 : 255}
+                    {...(f.nameField && {
+                      pattern: "[A-Za-z\\s'\\-]+",
+                      title: "Name may only contain letters, spaces, hyphens, and apostrophes.",
+                      onKeyDown: (e: React.KeyboardEvent<HTMLInputElement>) => {
+                        if (e.key.length === 1 && !/[A-Za-z\s'\-]/.test(e.key) && !e.ctrlKey && !e.metaKey) {
+                          e.preventDefault();
+                        }
+                      },
+                      onPaste: (e: React.ClipboardEvent<HTMLInputElement>) => {
+                        const text = e.clipboardData.getData("text");
+                        if (!/^[A-Za-z\s'\-]+$/.test(text)) e.preventDefault();
+                      },
+                    })}
                     className="w-full border-b border-cream/30 bg-transparent py-3 text-cream placeholder:text-cream/40 focus:border-gold focus:outline-none"
                   />
                 </div>
