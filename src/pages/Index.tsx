@@ -45,7 +45,7 @@ const Hero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.6 }}
         >
-          A High School of Distinction · Est. 1894
+          A Premier Private School · Mutare, Zimbabwe · Est. 2024
         </motion.span>
 
         <motion.h1
@@ -54,9 +54,9 @@ const Hero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.1, delay: 0.7, ease: [0.22, 1, 0.36, 1] }}
         >
-          <span className="block text-5xl md:text-7xl lg:text-[5.5rem]">A place where</span>
-          <span className="block text-5xl italic text-gold md:text-7xl lg:text-[5.5rem]">young minds</span>
-          <span className="block text-5xl md:text-7xl lg:text-[5.5rem]">find their voice.</span>
+          <span className="block text-5xl md:text-7xl lg:text-[5.5rem]">Enhance your</span>
+          <span className="block text-5xl italic text-gold md:text-7xl lg:text-[5.5rem]">future</span>
+          <span className="block text-5xl md:text-7xl lg:text-[5.5rem]">with Alma Institute.</span>
         </motion.h1>
 
         <motion.p
@@ -65,9 +65,11 @@ const Hero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.9, delay: 1 }}
         >
-          From Form 1 to Form 6, Alma Institute prepares scholars to think
-          rigorously, write beautifully, and lead with quiet conviction.
+          A dual ZIMSEC and Cambridge curriculum, set on a tranquil campus
+          along Vumba Road — preparing scholars to think rigorously, lead with
+          conviction, and meet challenges positively.
         </motion.p>
+
 
         <motion.div
           className="mt-12 flex flex-wrap items-center gap-6"
