@@ -6,6 +6,7 @@ import { ArrowRight, BookOpen, Compass, Feather, Sparkles } from "lucide-react";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { FadeUp, StaggerGroup, StaggerItem } from "@/components/motion-primitives";
+import { useIsMobile } from "@/hooks/use-mobile";
 
 import heroCampus from "@/assets/school-building.jpg";
 import library from "@/assets/library.jpg";
