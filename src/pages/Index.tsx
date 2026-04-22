@@ -359,13 +359,36 @@ const Quote = () => (
   </section>
 );
 
-const CTA = () => (
-  <section className="relative overflow-hidden bg-navy-deep text-cream">
-    <div className="absolute inset-0 opacity-50">
+const CTA = () => {
+  const ref = useRef<HTMLDivElement>(null);
+  const { scrollYProgress } = useScroll({ target: ref, offset: ["start end", "end start"] });
+  const bgY = useTransform(scrollYProgress, [0, 1], ["-15%", "15%"]);
+  const wordX = useTransform(scrollYProgress, [0, 1], ["-30%", "30%"]);
+  const logoY = useTransform(scrollYProgress, [0, 1], ["40%", "-40%"]);
+  const logoOpacity = useTransform(scrollYProgress, [0, 0.5, 1], [0, 0.18, 0]);
+  const contentY = useTransform(scrollYProgress, [0, 1], ["20%", "-20%"]);
+
+  return (
+  <section ref={ref} className="relative overflow-hidden bg-navy-deep text-cream">
+    <motion.div style={{ y: bgY }} className="absolute inset-[-10%] opacity-50">
       <img src={campusAerial} alt="" className="h-full w-full object-cover" loading="lazy" />
-    </div>
+    </motion.div>
     <div className="absolute inset-0 bg-gradient-to-b from-navy-deep/85 via-navy-deep/70 to-navy-deep" />
-    <div className="container-prose relative py-32 text-center">
+    <motion.div
+      style={{ x: wordX }}
+      aria-hidden
+      className="pointer-events-none absolute inset-x-0 top-1/2 -translate-y-1/2 select-none text-center font-serif text-[22vw] font-bold leading-none tracking-tighter text-gold/[0.06] whitespace-nowrap"
+    >
+      ALMA MATER
+    </motion.div>
+    <motion.img
+      src={almaLogo}
+      alt=""
+      aria-hidden
+      style={{ y: logoY, opacity: logoOpacity }}
+      className="pointer-events-none absolute left-1/2 top-1/2 h-[60vh] w-auto -translate-x-1/2 -translate-y-1/2 select-none"
+    />
+    <motion.div style={{ y: contentY }} className="container-prose relative py-32 text-center">
       <FadeUp>
         <span className="eyebrow !text-gold justify-center">Enrolment Open · Forms 1 – 6</span>
       </FadeUp>
@@ -397,9 +420,10 @@ const CTA = () => (
           </Link>
         </div>
       </FadeUp>
-    </div>
+    </motion.div>
   </section>
-);
+  );
+};
 
 const Index = () => (
   <>
