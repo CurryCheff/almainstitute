@@ -365,7 +365,7 @@ const CTA = () => {
   const ref = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({ target: ref, offset: ["start end", "end start"] });
   const bgY = useTransform(scrollYProgress, [0, 1], ["-15%", "15%"]);
-  const wordX = useTransform(scrollYProgress, [0, 1], ["-30%", "30%"]);
+  const wordX = useTransform(scrollYProgress, [0, 1], ["-12%", "12%"]);
   const logoY = useTransform(scrollYProgress, [0, 1], ["40%", "-40%"]);
   const logoOpacity = useTransform(scrollYProgress, [0, 0.5, 1], [0, 0.18, 0]);
   const contentY = useTransform(scrollYProgress, [0, 1], ["20%", "-20%"]);
@@ -379,7 +379,7 @@ const CTA = () => {
     <motion.div
       style={{ x: wordX }}
       aria-hidden
-      className="pointer-events-none absolute inset-x-0 top-1/2 -translate-y-1/2 select-none text-center font-serif text-[22vw] font-bold leading-none tracking-tighter text-gold/[0.06] whitespace-nowrap"
+      className="pointer-events-none absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 select-none font-serif text-[18vw] font-bold leading-none tracking-tighter text-gold/[0.06] whitespace-nowrap md:text-[16vw]"
     >
       ALMA MATER
     </motion.div>
