@@ -245,9 +245,19 @@ const Pillars = () => {
             </h2>
           </FadeUp>
         </div>
-        <StaggerGroup className="grid gap-px overflow-hidden bg-border md:grid-cols-2 lg:grid-cols-4">
-          {items.map((item) => (
-            <StaggerItem key={item.title}>
+        <div className="grid gap-px overflow-hidden bg-border md:grid-cols-2 lg:grid-cols-4">
+          {items.map((item, i) => (
+            <motion.div
+              key={item.title}
+              initial={{ opacity: 0, y: 60 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.6 }}
+              transition={{
+                duration: 0.8,
+                delay: i * 0.18,
+                ease: [0.22, 1, 0.36, 1],
+              }}
+            >
               <div className="group h-full bg-cream p-10 transition-colors duration-500 hover:bg-navy">
                 <item.icon className="h-7 w-7 text-gold transition-transform duration-500 group-hover:scale-110" strokeWidth={1.4} />
                 <h3 className="mt-8 font-serif text-2xl text-navy transition-colors duration-500 group-hover:text-cream">
@@ -258,9 +268,9 @@ const Pillars = () => {
                 </p>
                 <span className="mt-8 block h-px w-10 bg-gold transition-all duration-500 group-hover:w-20" />
               </div>
-            </StaggerItem>
+            </motion.div>
           ))}
-        </StaggerGroup>
+        </div>
       </div>
     </section>
   );
