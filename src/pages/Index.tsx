@@ -6,6 +6,7 @@ import { ArrowRight, BookOpen, Compass, Feather, Sparkles } from "lucide-react";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { FadeUp, StaggerGroup, StaggerItem } from "@/components/motion-primitives";
+import { useIsMobile } from "@/hooks/use-mobile";
 
 import heroCampus from "@/assets/school-building.jpg";
 import library from "@/assets/library.jpg";
@@ -212,6 +213,7 @@ const Mission = () => (
 );
 
 const Pillars = () => {
+  const isMobile = useIsMobile();
   const items = [
     {
       icon: BookOpen,
@@ -249,12 +251,12 @@ const Pillars = () => {
           {items.map((item, i) => (
             <motion.div
               key={item.title}
-              initial={{ opacity: 0, y: 60 }}
+              initial={{ opacity: 0, y: isMobile ? 32 : 60 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.6 }}
+              viewport={{ once: true, amount: isMobile ? 0.25 : 0.6, margin: isMobile ? "0px 0px -10% 0px" : "0px" }}
               transition={{
-                duration: 0.8,
-                delay: i * 0.18,
+                duration: isMobile ? 0.6 : 0.8,
+                delay: i * (isMobile ? 0.1 : 0.18),
                 ease: [0.22, 1, 0.36, 1],
               }}
             >
