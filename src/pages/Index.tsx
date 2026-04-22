@@ -164,7 +164,7 @@ const MottoParallax = () => {
           <span className="eyebrow !text-gold justify-center">The School Motto</span>
         </FadeUp>
         <FadeUp delay={0.1}>
-          <h2 className="display-serif mt-8 text-6xl italic text-cream md:text-8xl lg:text-[8rem]">
+          <h2 className="display-serif mt-8 whitespace-nowrap text-[15vw] italic leading-none text-cream sm:text-6xl md:text-8xl lg:text-[8rem]">
             Alma <span className="text-gold">Mater</span>
           </h2>
         </FadeUp>
